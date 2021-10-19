@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">		
+		<title>Тестовое</title>
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+		<section class="form">
+			<div class="form__header">
+				<h2 class="form__title">Мои объявления: Добавить новое объявление</h2>
+
+				<button class="btn btn__accent">Закрыть без сохранения</button>
+			</div>
+
+			<form class="form">
+				<div class="form__section">
+					<div class="form__block">
+						<div>
+							<label for="type">Тип объявления</label>
+							<input type="radio" name="type" id="" /> Аренда 
+							<input type="radio" name="type" id="" /> Продажа
+						</div>
+		
+						<div>
+							<label for="category">Категория техники</label>
+							<select name="category">
+								<option>Дорожно-строительная техника</option>
+								<option>Дорожно-строительная техника 2</option>
+							  </select>
+						</div>
+		
+						<div>
+							<label for="type">Тип техники</label>
+							<select name="type">
+								<option>Бульдозер</option>
+								<option>Бульдозер 2</option>
+							  </select>
+						</div>
+						
+		
+						<div>
+							<label for="brand">Бренд</label>
+							<select name="brand">
+								<option>Четра</option>
+								<option>Четра 2</option>
+							  </select>
+						</div>
+					</div>	
+					
+					<div class="form__block">
+						<div>
+							<label for="year">Год выпуска</label>
+							<input type="number" name="year"/>
+						</div>
+		
+						<div>
+							<label for="condition">Состояние</label>
+							<input type="radio" name="condition" id="" /> БУ
+							<input type="radio" name="condition" id="" /> Новое
+							<input type="radio" name="condition" id="" /> На запчасти
+						</div>
+		
+						<div>
+							<label for="availability">Наличие</label>
+							<input type="radio" name="availability" id="" /> Под заказ
+							<input type="radio" name="availability" id="" /> В наличии
+						</div>
+		
+						<div>
+							<label for="city">Город</label>
+							<select name="city">
+								<option>Благовещенск</option>
+								<option>Москва</option>
+							  </select>
+		
+							  <input type="checkbox" name="city" id="" /> Доставка по РФ
+						</div>
+		
+					</div>
+					
+					<div class="form__block">
+						<div>
+							<label for="descr ">Описание</label>
+							<textarea rows="10" cols="40" name="descr"></textarea>
+						</div>
+		
+						<div>
+							<label for="price">Стоимость</label>
+							<input type="text" name="price" placeholder="13 000 000 руб."/>
+		
+							<input type="checkbox" name="price" id="" /> По запросу
+						</div>
+					</div>
+				</div>	
+
+				<div class="form__section">
+					<div>
+						<label for="model">Модель</label>
+						<input type="text" name="model" placeholder="Бульдозер Четра РТ-777"/>
+					</div>
+	
+					<div>
+						<label for="mileage ">Пробег</label>
+						<input type="text" name="mileage" placeholder="599 км"/>
+					</div>			
+	
+					<div>
+						<label for="attach">Изображения</label>
+						<input type="file">
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="form__footer">
+					<button class="btn btn__transparent">Сохранить как черновик</button>
+					<button class="btn btn__fill">Опубликовать</button>
+				</div>
+			</form>
+		</section>
+	</body>
+</html>
