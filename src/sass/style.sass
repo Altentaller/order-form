@@ -4,12 +4,7 @@
 	font-style: normal
 	color: #bbc0c3
 
-.break
-  	flex-basis: 100%
-  	height: 0
-
-
-.form
+.container
 	margin: 0 auto
 	max-width: 1366px
 	&__header
@@ -20,40 +15,120 @@
 		text-transform: uppercase
 		font-weight: 600
 		color: #000000
+		&-small
+			display: none
 	.form
 		background: #f2f2f2
-		padding: 40px 30px		
-		label
+		padding: 40px 30px 20px 30px		
+		label, 
+		p
 			display: block
 			color: #80878d
-			margin-bottom: 15px
+			margin-bottom: 20px		
 		input
+			&[type=text]
+				background: #ffffff
+				border: none
+				box-sizing: border-box
+				padding: 10px 20px
+				width: 100%
 			&[type=radio]
+				box-sizing: border-box
 				border: 1px solid #b7b9bd
-				padding: 8px
+				display: inline-block				
+				vertical-align: middle
+				padding: 12px
 				-webkit-appearance: none
+				margin: 0 20px 0 20px
+				&:first-of-type 
+  					margin: 0 10px 0 0
+				&:checked
+					background: #b7b9bd
+					background-size: 9px 9px			
+			&[type=checkbox]
+				border: 1px solid #b7b9bd
+				padding: 12px
+				-webkit-appearance: none
+				vertical-align: middle
+				margin: 0 10px
+				box-sizing: border-box
 				&:checked
 					background: #b7b9bd
 					background-size: 9px 9px
+			&[type=number]
+				background: #ffffff
+				border: none
+				box-sizing: border-box
+				padding: 10px 20px
+				width: 180px
+
+			
+		.attach__block
+			display: flex
+			flex-wrap: nowrap
+			justify-content: space-between
+			align-items: center
+			padding: 0
+			margin: 0
+			input[type=file]
+				display: none
+			label 
+				position: relative
+				font-size: 20px
+				color: white
+				display: inline-block
+				box-sizing: border-box
+				cursor: pointer
+				width: 33%
+				height: 70px
+				background: rgba(225,223,223,0.7)
+				margin: 0 0 0 20px
+				&::after
+					content: "+"
+					position: absolute
+					top: 20px
+					left: 45%
+				&:nth-of-type(1)					
+					margin: 0
+
 		select
-			background: #ffffff
 			border: none
 			padding: 10px 20px
+			width: 100%
+		.field-small
+			width: 180px!important
+		textarea
+			resize: none
+			background: #ffffff
+			border: none
+			box-sizing: border-box
+			padding: 22px 20px
 			width: 100%
 		&__section
 			display: flex
 			justify-content: space-between
 			flex-wrap: wrap			
-			width: 100%
-		&__block
-			border: 1px solid red			
-			width: 32%
+			width: 100%			
+			&-flex-end
+				align-items: flex-end
+			&:nth-of-type(1)
+				.form__block:nth-of-type(2)	
+					div:nth-of-type(4)	
+						margin-top: 40px
+		&__block			
+			width: 32%			
 			div
 				margin-bottom: 30px
 		&__footer
 			display: flex
 			justify-content: flex-end
-			
+			.btn__accent
+				display: none
+		hr
+			border: 0
+			height: 1px
+			background: gray
+			margin-top: 30px
 
 .btn
 	border: none
@@ -72,3 +147,4 @@
 		padding: 25px 80px
 
 
+@import 'media'
