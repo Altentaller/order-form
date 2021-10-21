@@ -1,8 +1,10 @@
+@import 'variables'
+
 *
 	font-family: 'Museo Sans Cyrl', sans-serif
 	font-weight: 100
 	font-style: normal
-	color: #bbc0c3
+	color: $txt-color
 
 .container
 	margin: 0 auto
@@ -23,87 +25,8 @@
 		label, 
 		p
 			display: block
-			color: #80878d
-			margin-bottom: 20px		
-		input
-			&[type=text]
-				background: #ffffff
-				border: none
-				box-sizing: border-box
-				padding: 10px 20px
-				width: 100%
-			&[type=radio]
-				box-sizing: border-box
-				border: 1px solid #b7b9bd
-				display: inline-block				
-				vertical-align: middle
-				padding: 12px
-				-webkit-appearance: none
-				margin: 0 20px 0 20px
-				&:first-of-type 
-  					margin: 0 10px 0 0
-				&:checked
-					background: #b7b9bd
-					background-size: 9px 9px			
-			&[type=checkbox]
-				border: 1px solid #b7b9bd
-				padding: 12px
-				-webkit-appearance: none
-				vertical-align: middle
-				margin: 0 10px
-				box-sizing: border-box
-				&:checked
-					background: #b7b9bd
-					background-size: 9px 9px
-			&[type=number]
-				background: #ffffff
-				border: none
-				box-sizing: border-box
-				padding: 10px 20px
-				width: 180px
-
-			
-		.attach__block
-			display: flex
-			flex-wrap: nowrap
-			justify-content: space-between
-			align-items: center
-			padding: 0
-			margin: 0
-			input[type=file]
-				display: none
-			label 
-				position: relative
-				font-size: 20px
-				color: white
-				display: inline-block
-				box-sizing: border-box
-				cursor: pointer
-				width: 33%
-				height: 70px
-				background: rgba(225,223,223,0.7)
-				margin: 0 0 0 20px
-				&::after
-					content: "+"
-					position: absolute
-					top: 20px
-					left: 45%
-				&:nth-of-type(1)					
-					margin: 0
-
-		select
-			border: none
-			padding: 10px 20px
-			width: 100%
-		.field-small
-			width: 180px!important
-		textarea
-			resize: none
-			background: #ffffff
-			border: none
-			box-sizing: border-box
-			padding: 22px 20px
-			width: 100%
+			color: $title-color
+			margin-bottom: 20px
 		&__section
 			display: flex
 			justify-content: space-between
@@ -124,12 +47,91 @@
 			justify-content: flex-end
 			.btn__accent
 				display: none
+
+		/** styles for form's elements START **/
+		input
+			&[type=text]
+				background: #ffffff
+				border: none
+				box-sizing: border-box
+				padding: 10px 20px
+				width: 100%
+			&[type=radio]
+				box-sizing: border-box
+				border: 1px solid #b4bec7
+				display: inline-block				
+				vertical-align: middle
+				padding: 12px
+				-webkit-appearance: none
+				margin: 0 20px 0 20px
+				&:first-of-type 
+  					margin: 0 10px 0 0
+				&:checked
+					background: #b4bec7
+					background-size: 9px 9px			
+			&[type=checkbox]
+				border: 1px solid #b4bec7
+				padding: 12px
+				-webkit-appearance: none
+				vertical-align: middle
+				margin: 0 10px
+				box-sizing: border-box
+				&:checked
+					background: #b4bec7
+					background-size: 9px 9px
+			&[type=number]
+				background: #ffffff
+				border: none
+				box-sizing: border-box
+				padding: 10px 20px
+				width: 180px			
+		.attach__block
+			display: flex
+			flex-wrap: nowrap
+			justify-content: space-between
+			align-items: center
+			padding: 0
+			margin: 0
+			input[type=file]
+				display: none
+			label 
+				position: relative
+				font-size: 20px
+				color: #ffffff
+				display: inline-block
+				box-sizing: border-box
+				cursor: pointer
+				width: 33%
+				height: 70px
+				background: rgba(225,223,223,0.7)
+				margin: 0 0 0 20px
+				&::after
+					content: "+"
+					position: absolute
+					top: 20px
+					left: 45%
+				&:nth-of-type(1)					
+					margin: 0
+		select
+			border: none
+			padding: 10px 20px
+			width: 100%
+		.field-small
+			width: 180px!important
+		textarea
+			resize: none
+			background: #ffffff
+			border: none
+			box-sizing: border-box
+			padding: 22px 20px
+			width: 100%
+		/** styles for form's elements END **/
+			
 		hr
 			border: 0
 			height: 1px
-			background: gray
+			background: #b4bec7
 			margin-top: 30px
-
 .btn
 	border: none
 	padding: 25px 60px
@@ -138,11 +140,11 @@
 	cursor: pointer
 	&__accent		
 		background: #f2f2f2		
-		color: #83929f
+		color: $title-color
 	&__transparent
-		color: #788691
+		color: $title-color
 	&__fill
-		background: #27333f
+		background: $accent-color
 		color: #ffffff
 		padding: 25px 80px
 
