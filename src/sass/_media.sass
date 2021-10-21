@@ -39,7 +39,7 @@
 					&__transparent
 						padding: 25px 60px 25px 0
 
-@media (max-width: 767px) 
+@media (min-width: 430px) and (max-width: 767px) 
 	.container
 		&__header
 			flex-direction: column
@@ -68,6 +68,58 @@
 					background: transparent
 					color: #c5c5c5
 					padding: 0
+				.btn__transparent	
+					margin: 10px 0
+	.btn
+		padding: 25px 0px
+		&__accent		
+			background: #cecbcb		
+			color: #4a6881
+			width: 100%
+		&__transparent
+			width: 100%
+		&__fill
+			width: 100%
+
+@media (min-width: 300px) and (max-width: 429px) 
+	.container
+		&__header
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+		&__title
+			display: none
+			&-small
+				display: block
+				font-size: 18px		
+		.form			
+			display: flex
+			flex-wrap: wrap		
+			padding: 40px 10px 20px 10px		
+			&__section
+				.form__block			
+					width: 100%
+				&-flex-end
+					flex-direction: column
+					.form__block
+						margin: 0 0 20px 0		
+			input
+				&[type=radio]
+					margin: 0 5px 0 5px
+					&:first-of-type 
+						margin: 0 5px 0 0
+			.field-small
+				width: 140px!important
+			&__footer
+				flex-flow: column-reverse
+				width: 100%
+				.btn__accent
+					display: block
+					background: transparent
+					color: #c5c5c5
+					padding: 0
+				.btn__transparent	
+					margin: 10px 0
 	.btn
 		padding: 25px 0px
 		&__accent		
